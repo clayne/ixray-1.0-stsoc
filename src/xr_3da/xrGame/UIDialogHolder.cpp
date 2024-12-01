@@ -70,7 +70,8 @@ void CDialogHolder::StartMenu (CUIDialogWnd* pDialog, bool bDoHideIndicators)
 	pDialog->SetHolder				(this);
 	pDialog->Show					();
 
-	if( pDialog->NeedCursor() )
+	if (pDialog->NeedCursor())
+		GetUICursor()->CenterCursor();
 		GetUICursor()->Show();
 
 	if(g_pGameLevel)

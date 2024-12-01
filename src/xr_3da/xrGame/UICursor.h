@@ -28,4 +28,5 @@ public:
 	bool			IsVisible		() {return bVisible;}
 	void			Show			() {bVisible = true;}
 	void			Hide			() {bVisible = false;}
+	void			CenterCursor	();
 };

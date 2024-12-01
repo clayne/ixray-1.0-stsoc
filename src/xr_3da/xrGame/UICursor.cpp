@@ -109,3 +109,10 @@ void CUICursor::SetUICursorPosition(Fvector2 pos)
 
 	SetCursorPos(p.x, p.y);
 }
+
+void CUICursor::CenterCursor()
+{
+
+	SetCursorPos(Device.dwWidth / 2, Device.dwHeight / 2);
+	UpdateCursorPosition();
+}
