@@ -10,7 +10,6 @@
 #include "../../xrNetServer/net_server.h"
 #include "game_sv_base.h"
 #include "id_generator.h"
-#include "battleye.h"
 
 #ifdef DEBUG
 //. #define SLOW_VERIFY_ENTITIES
@@ -169,7 +168,7 @@ public:
 	virtual void			OnCL_Disconnected	(IClient* CL);
 	virtual bool			OnCL_QueryHost		();
 	virtual void			SendTo_LL			(ClientID ID, void* data, u32 size, u32 dwFlags=DPNSEND_GUARANTEED, u32 dwTimeout=0);
-
+	 
 	virtual IClient*		client_Create		();								// create client info
 	virtual void			client_Replicate	();								// replicate current state to client
 	virtual IClient*		client_Find_Get		(ClientID ID);					// Find earlier disconnected client
@@ -203,7 +202,6 @@ public:
 	virtual void			Assign_ServerType	( string512& res ) {};
 	virtual bool			HasPassword			()	{ return false; }
 	virtual bool			HasProtected		()	{ return false; }
-			bool			HasBattlEye			();
 
 	virtual void			GetServerInfo		( CServerInfo* si );
 public:

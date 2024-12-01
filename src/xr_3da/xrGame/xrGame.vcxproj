@@ -194,6 +194,11 @@
       <LargeAddressAware>true</LargeAddressAware>
       <ImportLibrary>$(SolutionDir)lib\$(ProjectName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.dll" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
     <Midl>
@@ -239,6 +244,11 @@
       <ImportLibrary>$(SolutionDir)lib\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.dll" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -291,6 +301,11 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <ImportLibrary>$(SolutionDir)lib\$(ProjectName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.dll" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Priquel|Win32'">
     <Midl>
@@ -336,6 +351,11 @@
       <LargeAddressAware>true</LargeAddressAware>
       <ImportLibrary>$(SolutionDir)lib\$(ProjectName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.dll" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Mixed_Priquel|Win32'">
     <Midl>
@@ -381,6 +401,11 @@
       <ImportLibrary>$(SolutionDir)lib\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.dll" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Priquel|Win32'">
     <Midl>
@@ -433,6 +458,11 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <ImportLibrary>$(SolutionDir)lib\$(ProjectName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.dll" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\xrGame.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="abstract_location_selector.h" />
@@ -873,8 +903,6 @@
     <ClInclude Include="base_client_classes.h" />
     <ClInclude Include="base_client_classes_wrappers.h" />
     <ClInclude Include="BastArtifact.h" />
-    <ClInclude Include="battleye.h" />
-    <ClInclude Include="battleye_system.h" />
     <ClInclude Include="BlackDrops.h" />
     <ClInclude Include="BlackGraviArtifact.h" />
     <ClInclude Include="BlockAllocator.h" />
@@ -1856,9 +1884,7 @@
     <ClInclude Include="xrServer_Object_Base.h" />
     <ClInclude Include="xrServer_script_macroses.h" />
     <ClInclude Include="xrServer_Space.h" />
-    <ClInclude Include="xr_Client_BattlEye.h" />
     <ClInclude Include="xr_level_controller.h" />
-    <ClInclude Include="xr_Server_BattlEye.h" />
     <ClInclude Include="xr_time.h" />
     <ClInclude Include="ZoneVisual.h" />
     <ClInclude Include="zone_effector.h" />
@@ -2733,7 +2759,6 @@
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <ClCompile Include="BastArtifact.cpp" />
-    <ClCompile Include="battleye_system.cpp" />
     <ClCompile Include="BlackDrops.cpp" />
     <ClCompile Include="BlackGraviArtifact.cpp" />
     <ClCompile Include="Bolt.cpp" />
@@ -6693,9 +6718,7 @@
     <ClCompile Include="xrServer_process_spawn.cpp" />
     <ClCompile Include="xrServer_process_update.cpp" />
     <ClCompile Include="xrServer_sls_clear.cpp" />
-    <ClCompile Include="xr_Client_BattlEye.cpp" />
     <ClCompile Include="xr_level_controller.cpp" />
-    <ClCompile Include="xr_Server_BattlEye.cpp" />
     <ClCompile Include="xr_time.cpp" />
     <ClCompile Include="ZoneVisual.cpp" />
     <ClCompile Include="zone_effector.cpp" />
