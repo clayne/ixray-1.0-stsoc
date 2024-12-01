@@ -611,7 +611,7 @@ void CUIBuyWnd::SetCurrentItem(CUICellItem* itm)
 	if (m_pCurrentCellItem)
 	{
 		string256					str;
-		m_itemInfo.InitItem			(CurrentIItem());
+		m_itemInfo.InitItem			(CurrentItem());
 		sprintf_s						(str, "%d RU", m_bag.GetItemPrice(itm));
 		m_itemInfo.UICost->SetText	(str);
 

@@ -127,7 +127,7 @@ void CUIMpTradeWnd::SetCurrentItem(CUICellItem* itm)
 {
 	if(m_pCurrentCellItem == itm)		return;
 	m_pCurrentCellItem					= itm;
-	m_item_info->InitItem				(CurrentIItem());
+	m_item_info->InitItem				(CurrentItem());
 	if (m_pCurrentCellItem)
 	{
 		const shared_str& current_sect_name = CurrentIItem()->object().cNameSect();

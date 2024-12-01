@@ -27,7 +27,7 @@ void CUIInventoryWnd::SetCurrentItem(CUICellItem* itm)
 {
 	if(m_pCurrentCellItem == itm) return;
 	m_pCurrentCellItem				= itm;
-	UIItemInfo.InitItem			(CurrentIItem());
+	UIItemInfo.InitItem			(CurrentItem());
 }
 
 void CUIInventoryWnd::SendMessage(CUIWindow *pWnd, s16 msg, void *pData)

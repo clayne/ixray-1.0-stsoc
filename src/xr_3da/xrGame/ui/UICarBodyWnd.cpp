@@ -349,7 +349,7 @@ void CUICarBodyWnd::SetCurrentItem(CUICellItem* itm)
 {
 	if(m_pCurrentCellItem == itm) return;
 	m_pCurrentCellItem		= itm;
-	m_pUIItemInfo->InitItem(CurrentIItem());
+	m_pUIItemInfo->InitItem(CurrentItem());
 }
 
 void CUICarBodyWnd::TakeAll()

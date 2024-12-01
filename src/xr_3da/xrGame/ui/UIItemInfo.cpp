@@ -131,8 +131,9 @@ void CUIItemInfo::Init(float x, float y, float width, float height, LPCSTR xml_n
 
 bool				IsGameTypeSingle();
 
-void CUIItemInfo::InitItem(CInventoryItem* pInvItem)
+void CUIItemInfo::InitItem(CUICellItem* pCellItem)
 {
+	CInventoryItem* pInvItem = pCellItem ? (CInventoryItem*)pCellItem->m_pData : NULL;
 	m_pInvItem				= pInvItem;
 	if(!m_pInvItem)			return;
 
@@ -141,14 +142,25 @@ void CUIItemInfo::InitItem(CInventoryItem* pInvItem)
 	{
 		UIName->SetText		(pInvItem->Name());
 	}
+	int count = pCellItem->ChildsCount() + 1;
 	if(UIWeight)
 	{
-		sprintf_s				(str, "%3.2f kg", pInvItem->Weight());
+		if (count > 1) {
+			sprintf_s(str, "%3.2f (%3.2f) kg", pInvItem->Weight(), pInvItem->Weight() * count);
+		}
+		else {
+			sprintf_s(str, "%3.2f kg", pInvItem->Weight());
+		}
 		UIWeight->SetText	(str);
 	}
 	if( UICost && IsGameTypeSingle() )
 	{
-		sprintf_s				(str, "%d RU", pInvItem->Cost());		// will be owerwritten in multiplayer
+		if (count > 1) {
+			sprintf_s(str, "%d (%d) RU", pInvItem->Cost(), pInvItem->Cost() * count);
+		}
+		else {
+			sprintf_s(str, "%d RU", pInvItem->Cost());
+		}
 		UICost->SetText		(str);
 	}
 

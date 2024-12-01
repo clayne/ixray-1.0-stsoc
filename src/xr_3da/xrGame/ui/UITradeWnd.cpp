@@ -596,7 +596,7 @@ void CUITradeWnd::SetCurrentItem(CUICellItem* itm)
 {
 	if(m_pCurrentCellItem == itm) return;
 	m_pCurrentCellItem				= itm;
-	m_uidata->UIItemInfo.InitItem	(CurrentIItem());
+	m_uidata->UIItemInfo.InitItem	(CurrentItem());
 	
 	if(!m_pCurrentCellItem)		return;
 

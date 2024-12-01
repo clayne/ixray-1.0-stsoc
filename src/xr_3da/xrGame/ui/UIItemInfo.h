@@ -1,6 +1,6 @@
 #pragma once
 #include "uiwindow.h"
-
+#include "UICellItem.h"
 
 class CInventoryItem;
 class CUIStatic;
@@ -8,6 +8,7 @@ class CUIScrollView;
 class CUIProgressBar;
 class CUIWpnParams;
 class CUIArtefactParams;
+class CUICellItem;
 
 extern const char * const 		fieldsCaptionColor;
 
@@ -29,7 +30,7 @@ public:
 
 	void				Init				(float x, float y, float width, float height, LPCSTR xml_name);
 	void				Init				(LPCSTR xml_name);
-	void				InitItem			(CInventoryItem* pInvItem);
+	void				InitItem			(CUICellItem* pInvItem);
 	void				TryAddWpnInfo		(const shared_str& wpn_section);
 	void				TryAddArtefactInfo	(const shared_str& af_section);
 
