@@ -196,6 +196,10 @@
       <ImportLibrary>$(SolutionDir)lib\$(ProjectName).lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.exe" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
     <Midl>
@@ -245,6 +249,10 @@
       <FixedBaseAddress>false</FixedBaseAddress>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.exe" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -302,6 +310,10 @@
       <FixedBaseAddress>false</FixedBaseAddress>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.exe" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Dedicated|Win32'">
     <Midl>
@@ -351,6 +363,10 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(SolutionDir)lib\dedicated\$(ProjectName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.exe" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Mixed_Dedicated|Win32'">
     <Midl>
@@ -400,6 +416,10 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(SolutionDir)lib\dedicated\$(ProjectName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.exe" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dedicated|Win32'">
     <Midl>
@@ -451,6 +471,10 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(SolutionDir)lib\dedicated\$(ProjectName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.exe" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"
+copy "C:\Users\ykzmd\source\repos\ixray-1.0-stsoc\bin\XR_3DA.pdb" "C:\Games\GOG\Games\S.T.A.L.K.E.R. Shadow of Chernobyl\bin"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ai_script_lua_extension.h" />
