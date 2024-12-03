@@ -194,9 +194,11 @@ void CHUDTarget::Render()
 						if (our_inv_owner->inventory().TotalWeight() + l_pI->Weight() > our_inv_owner->inventory().GetMaxWeight()) {
 							color = C_OVERENCUMBERED;
 						}
-						F->SetColor	(subst_alpha(color, u8(iFloor(255.f * (fuzzyShowInfo - 0.5f) * 2.f))));
-						F->OutNext	("%s",l_pI->Name());
-						F->OutNext("%3.2f kg   %d RU",l_pI->Weight(), l_pI->Cost());
+						float alpha = 255.f * (fuzzyShowInfo * 2.f);
+						clamp(alpha, 0.0f, 255.f);
+						F->SetColor(subst_alpha(color, u8(iFloor(alpha))));
+						F->OutNext("%s", l_pI->Name());
+						F->OutNext("%3.2f кг   %d руб", l_pI->Weight(), l_pI->Cost());
 
 						fuzzyShowInfo += SHOW_INFO_SPEED*Device.fTimeDelta;
 					}
