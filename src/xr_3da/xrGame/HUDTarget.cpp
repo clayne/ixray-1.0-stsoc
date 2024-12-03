@@ -29,7 +29,7 @@
 u32 C_ON_ENEMY		D3DCOLOR_XRGB(0xff,0,0);
 u32 C_ON_NEUTRAL	D3DCOLOR_XRGB(0xff,0xff,0x80);
 u32 C_ON_FRIEND		D3DCOLOR_XRGB(0,0xff,0);
-
+u32 C_OVERENCUMBERED D3DCOLOR_XRGB(0xcc, 0x0e, 0x0e);
 
 #define C_DEFAULT	D3DCOLOR_XRGB(0xff,0xff,0xff)
 #define C_SIZE		0.025f
@@ -190,10 +190,14 @@ void CHUDTarget::Render()
 				else 
 					if (l_pI && our_inv_owner && RQ.range < 2.0f*our_inv_owner->inventory().GetTakeDist())
 					{
-						if (fuzzyShowInfo>0.5f){
-							F->SetColor	(subst_alpha(C,u8(iFloor(255.f*(fuzzyShowInfo-0.5f)*2.f))));
-							F->OutNext	("%s",l_pI->Name/*Complex*/());
+						u32 color = C_DEFAULT;
+						if (our_inv_owner->inventory().TotalWeight() + l_pI->Weight() > our_inv_owner->inventory().GetMaxWeight()) {
+							color = C_OVERENCUMBERED;
 						}
+						F->SetColor	(subst_alpha(color, u8(iFloor(255.f * (fuzzyShowInfo - 0.5f) * 2.f))));
+						F->OutNext	("%s",l_pI->Name());
+						F->OutNext("%3.2f kg   %d RU",l_pI->Weight(), l_pI->Cost());
+
 						fuzzyShowInfo += SHOW_INFO_SPEED*Device.fTimeDelta;
 					}
 			}
