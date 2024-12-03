@@ -142,7 +142,7 @@ void CUIMainIngameWnd::Init()
 	m_iPickUpItemIconWidth		= UIPickUpItemIcon.GetWidth();
 	m_iPickUpItemIconHeight		= UIPickUpItemIcon.GetHeight();
 	m_iPickUpItemIconX			= UIPickUpItemIcon.GetWndRect().left;
-	m_iPickUpItemIconY			= UIPickUpItemIcon.GetWndRect().top;
+	m_iPickUpItemIconY			= UIPickUpItemIcon.GetWndRect().top + 20;
 	//---------------------------------------------------------
 
 
