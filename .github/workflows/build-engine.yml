@@ -90,7 +90,7 @@ jobs:
           msbuild $env:solution_name `
             -p:Configuration=${{ matrix.config }} `
             -p:Platform=${{ matrix.platform }} `
-            -p:PostBuildEvent= `
+            /p:PostBuildEventUseInBuild=false `
             -maxCpuCount `
             -nologo
 
