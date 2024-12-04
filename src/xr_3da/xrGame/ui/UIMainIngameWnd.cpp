@@ -915,19 +915,24 @@ void CUIMainIngameWnd::RenderQuickInfos()
 
 	static CGameObject *pObject			= NULL;
 	LPCSTR actor_action					= m_pActor->GetDefaultActionForObject();
-	UIStaticQuickHelp.Show				(NULL!=actor_action);
+	if (NULL == actor_action) {
 
-	if(NULL!=actor_action){
-		if(_stricmp(actor_action,UIStaticQuickHelp.GetText()))
-			UIStaticQuickHelp.SetTextST				(actor_action);
-	}
+		UIStaticQuickHelp.Show(false);
+		UIStaticQuickHelp.ResetClrAnimation();
 
-	if (pObject!=m_pActor->ObjectWeLookingAt())
-	{
-		UIStaticQuickHelp.SetTextST				(actor_action);
-		UIStaticQuickHelp.ResetClrAnimation		();
-		pObject	= m_pActor->ObjectWeLookingAt	();
 	}
+	else {
+		LPCSTR action_str = *CStringTable().translate(actor_action);
+		if (_stricmp(action_str, UIStaticQuickHelp.GetText())) {
+			UIStaticQuickHelp.SetText(action_str);
+		}
+		if (pObject != m_pActor->ObjectWeLookingAt()) {
+			pObject = m_pActor->ObjectWeLookingAt();
+			UIStaticQuickHelp.ResetClrAnimation();
+		}
+		UIStaticQuickHelp.Show(true);
+	}
+	
 }
 
 void CUIMainIngameWnd::ReceiveNews(GAME_NEWS_DATA* news)
